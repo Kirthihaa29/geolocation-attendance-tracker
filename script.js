@@ -18,9 +18,9 @@ const MODEL_URL = 'https://justadudewhohacks.github.io/face-api.js/models';
 
 async function loadModels() {
   try {
-    await faceapi.loadTinyFaceDetectorModel(MODEL_URL);
-    await faceapi.loadFaceLandmarkTinyModel(MODEL_URL);
-    await faceapi.loadFaceRecognitionModel(MODEL_URL);
+    await faceapi.loadTinyFaceDetectorModel(MODEL_URL + 'tiny_face_detector/');
+    await faceapi.loadFaceLandmarkTinyModel(MODEL_URL + 'face_landmark_68_tiny/');
+    await faceapi.loadFaceRecognitionModel(MODEL_URL + 'face_recognition/');
     console.log('Models loaded successfully');
     return true;
   } catch (err) {
